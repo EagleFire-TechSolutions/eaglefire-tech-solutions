@@ -1,19 +1,24 @@
 import express from "express";
+
+
 import app from "./app.js";
-
-import dbconnection from "../src/db/index.js";
-
- dbconnection()
- .then(() => {
-    console.log("DB is connected");
-    
- })
- .catch((err) => {
-    console.log(err);
-    
- });
+import dbconnection from "./db/index.js";
 
 const PORT = process.env.PORT || 5000;
+
+console.log("ABASTHAN PORT:", process.env.PORT);
+console.log("USING PORT:", PORT);
+
+dbconnection()
+.then(()=>{
+    console.log("DB connected");
+    
+})
+.catch((err)=>{
+    console.log(err);
+    
+});
+
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on PORT ${PORT}`);
 });
