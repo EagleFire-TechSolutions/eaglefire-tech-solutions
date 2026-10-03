@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import React from "react";
 export default function Contact(){
+
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [message, setMessage] = useState("");
-const handleSubmit = async (e) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
    

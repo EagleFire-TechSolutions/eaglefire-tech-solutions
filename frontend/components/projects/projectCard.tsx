@@ -4,7 +4,7 @@ type ProjectCardProps = {
     project:{
      id : string,
      title : string,
-     catagory: string,
+     category: string,
      description : string,
     image : string,
     technologies: string[],
@@ -19,7 +19,7 @@ export default function ProjectCard({ project } : ProjectCardProps){
                 <img src={project.image} alt = {project.title}/>
             </div>
             <div className="project-card__content">
-                <p className="project-card__catagory">{project.catagory}</p>
+                <p className="project-card__category">{project.category}</p>
                 <h3 className="project-card__title">{project.title}</h3>
                 <p className="project-card__description">{project.description}</p>
                 <div className="project-card__technologies">
