@@ -16,9 +16,9 @@ app.use(express.urlencoded( {extended : true}));
 app.use(cookieParser());
 app.use(helmet());
 app.use(cors({
-    origin: "http://localhost:3000",
-    Credential : true 
-}))
+    origin: ["http://localhost:3000", "http://192.168.18.73:3000"],
+    credentials: true
+}));
 
 app.get("/" , (req ,res) => {
     res.send("Hello server is running")

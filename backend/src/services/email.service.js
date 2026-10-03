@@ -11,7 +11,7 @@ const sendContactNotification = async ({
 }) => {
     const { data, error } = await resend.emails.send({
         from: "Eaglefire@resend.dev",
-        to: "eaglefire.dev@gmail.com",
+        to: "eaglefiredev34@gmail.com",
         replyTo: email,
         subject: "New Project Inquiry - EagleFire",
         html: `

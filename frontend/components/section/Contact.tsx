@@ -214,27 +214,20 @@ const formData = new FormData(form);
 
       </div>
 
-      <button
-        type="submit"
-        className="contact-form__button"
-      >
-        <span>Send Project Inquiry</span>
-      </button>
-{message && (
-    <p className="contact-form__message" role="status">
-        {message}
-    </p>
-)}
-
-<button
+     <button
     type="submit"
     className="contact-form__button"
     disabled={isSubmitting}
 >
     <span>
-        {isSubmitting ? "Sending..." : "Response Sent!"}
+        {isSubmitting ? "Sending..." : "Send Project Inquiry"}
     </span>
 </button>
+{message && (
+    <p className="contact-form__message" role="status">
+        {message}
+    </p>
+)}
     </form>
 
   </div>
